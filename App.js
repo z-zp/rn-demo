@@ -20,7 +20,7 @@ import Swiper from 'react-native-swiper';
 import { StackNavigator } from 'react-navigation';
 import DetailsScreen from './page/recom/recom'
 import ManhuaScreen from './page/detail/detail'
-import TodoScreen from './page/todolist/index'
+import TodoScreen from './page/add/index'
 
 
 const images = [
