@@ -12,13 +12,16 @@ import {
   View,
   Image,
   ScrollView,
-  TouchableHighlight
+  TouchableHighlight,
+  ImageBackground
 
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { StackNavigator } from 'react-navigation';
 import DetailsScreen from './page/recom/recom'
 import ManhuaScreen from './page/detail/detail'
+import TodoScreen from './page/todolist/index'
+
 
 const images = [
   'https://sinastorage.com/sandbox/client/2018/01/16/TGtlEODp.jpg',
@@ -70,10 +73,10 @@ _onPress= () =>  {
     
 }
 _onPress1= () =>  {
-  this.props.navigation.navigate('Details')
-
-  console.log(1)
-  
+  this.props.navigation.navigate('Details')  
+}
+_onPress2= () =>  {
+  this.props.navigation.navigate('Todo')  
 }
 handleOnTouchStarCapture =()=>{
   this.props.navigation.navigate('Manhua')
@@ -85,7 +88,9 @@ handleOnTouchStarCapture =()=>{
       <Text style = {styles.topText}
         onPress={this._onPress1}
         >推荐</Text>
-      <Text style = {styles.topText}>看图</Text>
+      <Text style = {styles.topText}
+        onPress={this._onPress2}
+      >看图</Text>
       <Text style = {styles.topText}>关注</Text>
       <Text style = {styles.topText}>我的</Text>
     </View> : null;    // 菜单
@@ -105,15 +110,19 @@ handleOnTouchStarCapture =()=>{
         <View style={styles.container}>
 
           <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
+          <ImageBackground source={{ uri: 'https://sinastorage.com/sandbox/client/2018/01/16/TGtlEODp.jpg' }} style={{flex:1 }}>
             <View style={styles.slide1}
             onTouchStartCapture = {this.handleOnTouchStarCapture}
             >
-              <Text style={styles.text}>Hello Swiper</Text>
+              
+                <Text style={styles.text}>And simple</Text> 
+              
             </View>
+            </ImageBackground>
             <View style={styles.slide2}
             onTouchStartCapture = {this.handleOnTouchStarCapture}
             >
-              <Text style={styles.text}>Beautiful</Text>
+              <Image source={{ uri: 'https://sinastorage.com/sandbox/client/2018/01/16/TGtlEODp.jpg' }} style={{resizeMode:'cover'  }} />
             </View>
             <View style={styles.slide3}
             onTouchStartCapture = {this.handleOnTouchStarCapture}
@@ -157,6 +166,9 @@ const RootStack = StackNavigator(
     },
     Manhua: {
       screen: ManhuaScreen,
+    },
+    Todo: {
+      screen: TodoScreen,
     },
   },
   {
@@ -205,7 +217,6 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB'
   },
   slide2: {
     flex: 1,
@@ -220,6 +231,7 @@ const styles = {
     backgroundColor: '#92BBD9'
   },
   text: {
+    
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold'
