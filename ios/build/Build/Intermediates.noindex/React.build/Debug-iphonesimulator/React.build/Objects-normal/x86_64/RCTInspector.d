@@ -1,12 +1,12 @@
 dependencies: \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Inspector/RCTInspector.mm \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Inspector/RCTInspector.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/ios/build/Build/Products/Debug-iphonesimulator/include/jsinspector/InspectorInterfaces.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/Base/RCTUtils.h \
-  /Users/zhaozhenping/Desktop/rn/AwesomeProject/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Inspector/RCTInspector.mm \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Inspector/RCTInspector.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/zhaozhenping/Desktop/rn/test/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/zhaozhenping/Desktop/rn/test/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/zhaozhenping/Desktop/rn/test/ios/build/Build/Products/Debug-iphonesimulator/include/jsinspector/InspectorInterfaces.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/zhaozhenping/Desktop/rn/test/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h

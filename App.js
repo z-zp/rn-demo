@@ -21,6 +21,9 @@ import { StackNavigator } from 'react-navigation';
 import DetailsScreen from './page/recom/recom'
 import ManhuaScreen from './page/detail/detail'
 import TodoScreen from './page/add/index'
+import SearchScreen from './page/search/search'
+import VedioScreen from './page/vedio/vedio'
+
 
 
 const images = [
@@ -78,8 +81,15 @@ _onPress1= () =>  {
 _onPress2= () =>  {
   this.props.navigation.navigate('Todo')  
 }
+_onPress3= () =>  {
+  this.props.navigation.navigate('Vedio')  
+}
 handleOnTouchStarCapture =()=>{
   this.props.navigation.navigate('Manhua')
+}
+_onPressSearch = ()=>{
+  console.log(123)
+  this.props.navigation.navigate('Search')
 }
   
   render() {
@@ -91,7 +101,9 @@ handleOnTouchStarCapture =()=>{
       <Text style = {styles.topText}
         onPress={this._onPress2}
       >看图</Text>
-      <Text style = {styles.topText}>关注</Text>
+      <Text style = {styles.topText}
+        onPress={this._onPress3}
+      >关注</Text>
       <Text style = {styles.topText}>我的</Text>
     </View> : null;    // 菜单
 
@@ -103,9 +115,14 @@ handleOnTouchStarCapture =()=>{
             <Image source={{ uri: 'https://img.manhua.weibo.com/static/b/wb_comic/dist/static/image/category.png?v=1' }} style={{ width: 24, height: 24, }} />
           </TouchableHighlight>
           <Image source={{ uri: 'https://img.manhua.weibo.com/static/b/wb_comic/dist/static/image/logo.png?v=1' }} style={{ width: 100, height: 24, }} />
-          <Image source={{ uri: 'https://img.manhua.weibo.com/static/b/wb_comic/dist/static/image/search.png?v=1' }} style={{ width: 24, height: 24, }} />
+          <TouchableHighlight onPress={this._onPressSearch}>
+          <Image 
+          source={{ uri: 'https://img.manhua.weibo.com/static/b/wb_comic/dist/static/image/search.png?v=1' }} style={{ width: 24, height: 24, }} />
+          </TouchableHighlight>
         </View>
-        <ScrollView contentContainerStyle={styles.contentContainer}>
+        <ScrollView contentContainerStyle={styles.contentContainer}
+          bounces = {false}
+        >
         {v}
         <View style={styles.container}>
 
@@ -170,6 +187,12 @@ const RootStack = StackNavigator(
     Todo: {
       screen: TodoScreen,
     },
+    Search:{
+      screen: SearchScreen,
+    },
+    Vedio:{
+      screen: VedioScreen,
+    }
   },
   {
     //隐藏顶部title
